@@ -1,0 +1,12 @@
+type,name,path,description
+#S,brew,$HOME/bin/install/brew.sh,package manager
+B,wget,,
+B,git,,
+BC,alacritty,,
+B,vim,,
+B,httpie,,query utility
+B,tmux,,terminal multiplexer
+B,jq,,json query tool
+B,mas-cli/tap/mas,,CLI to install from apple store
+M,747648890,,install Telegram
+BC,google-chrome,,

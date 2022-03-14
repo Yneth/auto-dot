@@ -1,0 +1,6 @@
+auto installation script for macos
+==================================
+
+run `./setup` first, to install brew and babashka,
+
+then `./install.clj file.csv` 
