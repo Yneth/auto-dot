@@ -2,9 +2,10 @@
 (require '[babashka.process :refer [process]])
 
 (declare run-which-cmd)
+(def bash-path (delay (run-which-cmd "bash")))
 (def brew-path (delay (run-which-cmd "brew")))
-(def pip-path (delay (run-which-cmd "pip")))
-(def mas-path (delay (run-which-cmd "mas")))
+(def pip-path  (delay (run-which-cmd "pip")))
+(def mas-path  (delay (run-which-cmd "mas")))
 
 (defn run-which-cmd [cmd-lookup]
   (let [resp (shell/sh "which" cmd-lookup)]
@@ -27,7 +28,7 @@
 
 
 (defn bash [path]
-  (run-proc ["bash" "-c" path]))
+  (run-proc [@bash-path "-c" path]))
 
 (defn brew [name & {:keys [cask?]}]
   (let [args (->>
