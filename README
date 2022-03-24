@@ -3,4 +3,8 @@ auto installation script for macos
 
 run `./setup` first, to install brew and babashka,
 
-then `./install.clj file.csv` 
+then `./install.clj file.csv`
+
+TODO:
+ - skip already installed packages
+ - add batch installation for brew, pip etc.
